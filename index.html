@@ -3,16 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YOU SHOULD KILL YOURSELF, NOW!!!</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            text-align: center;
-        }
-    </style>
+    <title>SPA ASSIGNMENT II</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p class="lorem-ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div id="sysinfos">
+        <p><span class="label">Hostname:</span> <span id="hostname"></span></p>
+        <p><span class="label">Platform:</span> <span id="platform"></span></p>
+        <p><span class="label">Architecture:</span> <span id="arch"></span></p>
+        <p><span class="label">OS Release:</span> <span id="release"></span></p>
+        <p><span class="label">Uptime:</span> <span id="uptime"></span></p>
+        <p><span class="label">Total Memory:</span> <span id="totalMemory"></span></p>
+        <p><span class="label">Free Memory:</span> <span id="freeMemory"></span></p>
+    </div>
+
+    <script>
+        fetch('/info')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('hostname').textContent = `Hostname: ${data.hostname}`;
+                document.getElementById('platform').textContent = `Platform: ${data.platform}`;
+                document.getElementById('arch').textContent = `Architecture: ${data.arch}`;
+                document.getElementById('release').textContent = `OS Release: ${data.release}`;
+                document.getElementById('uptime').textContent = `Uptime: ${data.uptime} seconds`;
+                document.getElementById('totalMemory').textContent = `Total Memory: ${data.totalMemory} MB`;
+                document.getElementById('freeMemory').textContent = `Free Memory: ${data.freeMemory} MB`;
+            })
+            .catch(error => console.error('Error fetching info:', error));
+    </script>
 </body>
 </html>
