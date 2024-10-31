@@ -17,18 +17,19 @@
         <p><span class="label">Total Memory:</span> <span id="totalMemory"></span></p>
         <p><span class="label">Free Memory:</span> <span id="freeMemory"></span></p>
     </div>
+    <p id="zhongxina"><span class="first-line">早上好中国</span> 现在我有冰淇淋 我很喜欢冰淇淋 但是 速度与激情9 比冰淇淋 速度与激情 速度与激情9 我最喜欢 所以…现在是音乐时间 准备 1 2 3 两个礼拜以后 速度与激情9 ×3 不要忘记 不要错过 记得去电影院看速度与激情9 因为非常好电影 动作非常好 差不多一样冰淇淋 再见</p>
 
     <script>
         fetch('/info')
             .then(response => response.json())
             .then(data => {
-                document.getElementById('hostname').textContent = `Hostname: ${data.hostname}`;
-                document.getElementById('platform').textContent = `Platform: ${data.platform}`;
-                document.getElementById('arch').textContent = `Architecture: ${data.arch}`;
-                document.getElementById('release').textContent = `OS Release: ${data.release}`;
-                document.getElementById('uptime').textContent = `Uptime: ${data.uptime} seconds`;
-                document.getElementById('totalMemory').textContent = `Total Memory: ${data.totalMemory} MB`;
-                document.getElementById('freeMemory').textContent = `Free Memory: ${data.freeMemory} MB`;
+                document.getElementById('hostname').textContent = `${data.hostname}`;
+                document.getElementById('platform').textContent = `${data.platform}`;
+                document.getElementById('arch').textContent = `${data.arch}`;
+                document.getElementById('release').textContent = `${data.release}`;
+                document.getElementById('uptime').textContent = `${data.uptime} seconds`;
+                document.getElementById('totalMemory').textContent = `${data.totalMemory} MB`;
+                document.getElementById('freeMemory').textContent = `${data.freeMemory} MB`;
             })
             .catch(error => console.error('Error fetching info:', error));
     </script>
