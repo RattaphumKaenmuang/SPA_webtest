@@ -13,6 +13,6 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
-@app.get("/sysinfo")
+@app.get("/api/sysinfo")
 def get_sysinfo():
     return JSONResponse(content=main.get_sysinfo())
