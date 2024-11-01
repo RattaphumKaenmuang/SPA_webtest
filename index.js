@@ -1,7 +1,10 @@
-const API_URL = "http://127.0.0.1:6969"
+// EDIT API URL HERE
+const config = {
+    API_URL: 'http://127.0.0.1:6969'
+};
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetch(API_URL + '/sysinfo')
+    fetch(config.API_URL + '/sysinfo')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
