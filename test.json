@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Zedong",
+        "surname": "Mao",
+        "year": 4,
+        "ID": "88888888",
+        "GPA": 3.99
+    },
+    {
+        "name": "Ne",
+        "surname": "ver",
+        "year": 1,
+        "ID": "11111111",
+        "GPA": 2.9
+    },
+    {
+        "name": "Gonna",
+        "surname": "Give",
+        "year": 2,
+        "ID": "22222222",
+        "GPA": 3.4
+    },
+    {
+        "name": "You",
+        "surname": "Up",
+        "year": 3,
+        "ID": "33333333",
+        "GPA": 1.9
+    },
+    {
+        "name": "SigmaRizz",
+        "surname": "GyattFanumTax",
+        "year": 4,
+        "ID": "177013",
+        "GPA": 4.0
+    }
+]
