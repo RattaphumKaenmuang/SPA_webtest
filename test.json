@@ -33,5 +33,12 @@
         "year": 4,
         "ID": "177013",
         "GPA": 4.0
+    },
+    {
+        "name": "string",
+        "surname": "string",
+        "year": 0,
+        "ID": "string",
+        "GPA": 0.0
     }
 ]
